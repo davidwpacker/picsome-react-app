@@ -1,16 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import {Route, BrowserRouter as Router} from "react-router-dom";
+import {Switch, Route} from "react-router-dom"
 
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            <h1> *testing github pages w/ react and github actions</h1>
-          </p>
+        <Switch>
+                <Route exact path="/">
+                    <Photos />
+                </Route>
+                
+                <Route path="/cart">
+                    <Cart />
+                </Route>
+            </Switch>
            
           
         </header>
